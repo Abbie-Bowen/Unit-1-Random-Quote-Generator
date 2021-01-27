@@ -10,7 +10,7 @@ project 1 - A Random Quote Generator
 /***
  * `quotes` array
 ***/
-const quotes [
+const quotes = [
   {
     quote:"Like Beyoncé, I excel as a solo artist.",
     citation:"David",
