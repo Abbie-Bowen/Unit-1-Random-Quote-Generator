@@ -8,7 +8,7 @@ project 1 - A Random Quote Generator
   // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
 /***
- * `quotes` array
+ * Schitts Creek `quotes` array
 ***/
 const quotes = [
   {
@@ -88,22 +88,22 @@ const quotes = [
     season:1,
     episode:"Our Cup Runneth Over",
   },
-
 ]
 
 
 /***
  * `getRandomQuote` function
-
- delete this, it's just an example
 ***/
 
+//random number variable
+const getRandomNumber = Math.floor(Math.random() * quotes.length + 1);
 
+//function getRandomQuote () {}
 
 /***
  * `printQuote` function
 ***/
-
+//function printQuote () {}
 
 
 /***
@@ -111,4 +111,4 @@ const quotes = [
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-document.getElementById('load-quote').addEventListener("click", printQuote, false);
+//document.getElementById('load-quote').addEventListener("click", printQuote, false);
