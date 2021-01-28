@@ -94,11 +94,11 @@ const quotes = [
 /***
  * `getRandomQuote` function
 ***/
-
-//random number variable
-const getRandomNumber = Math.floor(Math.random() * quotes.length + 1);
-
-//function getRandomQuote () {}
+function getRandomQuote() {
+    let randomNumber = Math.floor(Math.random() * quotes.length);   //random number variable
+    let testquote = quotes[randomNumber].quote;
+    console.log(testquote);
+  };
 
 /***
  * `printQuote` function
