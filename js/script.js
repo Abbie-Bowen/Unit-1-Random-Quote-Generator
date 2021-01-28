@@ -9,84 +9,88 @@ project 1 - A Random Quote Generator
 
 /***
  * Schitts Creek `quotes` array
+  quotes
+  source or character
+  year the season was released
+  season
+  citation or episode
 ***/
 const quotes = [
   {
     quote:"Like Beyoncé, I excel as a solo artist.",
-    citation:"David",
+    source:"David",
     year:2018,
     season:4,
-    episode:"Girls Night",
+    citation:"Girls Night",
   },
   {
     quote:"I'm trying very hard not to connect with people right now.",
-    citation:"David",
+    source:"David",
     year:2015,
     season:1,
-    episode:"The Drip",
+    citation:"The Drip",
   },
   {
     quote:"Stop doing that with your face.",
-    citation:"Alexis",
+    source:"Alexis",
     year:2016,
     season:2,
-    episode:"The Candidate",
+    citation:"The Candidate",
   },
   {
     quote:"I don't skate through life, David. I walk through life, in really nice shoes.",
-    citation:"Alexis",
+    source:"Alexis",
     year:2017,
     season:3,
-    episode:"Driving Test",
+    citation:"Driving Test",
   },
   {
     quote:"I'm positively bedeviled with meetings et cetera.",
-    citation:"Moira",
+    source:"Moira",
     year:2018,
     season:4,
-    episode:"Dead Guy in Room 4",
+    citation:"Dead Guy in Room 4",
   },
   {
     quote:"I would be pleased to RSVP as pending.",
-    citation:"Moira",
+    source:"Moira",
     year:2017,
     season:3,
-    episode:"Murder Mystery",
+    citation:"Murder Mystery",
   },
   {
     quote:"I never heard someone say so many wrong things, one after the other, consecutively, in a row.",
-    citation:"David",
+    source:"David",
     year:2018,
     season:4,
-    episode:"Girls' Night",
+    citation:"Girls' Night",
   },
   {
     quote:"We can talk about this anytime you'd like. Preferably not before 10am, because I'm not really a morning person.",
-    citation:"David",
+    source:"David",
     year:2017,
     season:3,
-    episode:"Grad Night",
+    citation:"Grad Night",
   },
   {
     quote:"David, stop acting like a disgruntled pelican.",
-    citation:"Moira",
+    source:"Moira",
     year:2017,
     season:3,
-    episode:"Opening Night",
+    citation:"Opening Night",
   },
   {
     quote:"Tweet us on Facebook!",
-    citation:"Johnny",
+    source:"Johnny",
     year:2017,
     season:3,
-    episode:"Motel Review",
+    citation:"Motel Review",
   },
   {
     quote:"It's almost dark and my son is afraid of moths",
-    citation:"Johnny",
-    year:2015,
+    source:"Johnny",
     season:1,
-    episode:"Our Cup Runneth Over",
+    citation:"Our Cup Runneth Over",
   },
 ]
 
@@ -95,15 +99,26 @@ const quotes = [
  * `getRandomQuote` function
 ***/
 function getRandomQuote() {
-    let randomNumber = Math.floor(Math.random() * quotes.length);   //random number variable
-    let testquote = quotes[randomNumber].quote;
-    console.log(testquote);
-  };
+    let randomNumber = Math.floor(Math.random() * quotes.length);   //random number variable produces a number between 0 and quotes length
+    return quotes[randomNumber];
+  }
 
 /***
  * `printQuote` function
+ You will program the printQuote function to perform three tasks:
+ 1.call the getRandomQuote function,
+ 2.use the returned quote object to build a string of HTML and quote properties,
+ 3.then use that string to display a random quote in the browser.
 ***/
-//function printQuote () {}
+function printQuote () {
+  let randomQuoteObject = getRandomQuote()
+  let htmlString = `<p class="quote"> ${randomQuoteObject.quote}</p>
+<p class="source"> ${randomQuoteObject.source} Rose.`
+
+
+;
+console.log (htmlString);
+}
 
 
 /***
