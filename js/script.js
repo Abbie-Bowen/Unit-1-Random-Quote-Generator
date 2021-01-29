@@ -171,13 +171,14 @@ function printQuote () {
     document.body.style.backgroundColor = randomRGB(randomColor);
 }
 
-//formating: changing titles to the TV Show
+//formating
+// changing titles to the TV Show
 document.querySelector('h1').innerHTML = "Schitt's Creek Quotes";
 document.querySelector('title').innerHTML = "Schitt's Creek Quotes";
-
+//auto refresh page after 15 seconds
+setInterval(printQuote, 5000)
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
-
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
