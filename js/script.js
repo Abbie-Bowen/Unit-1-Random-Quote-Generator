@@ -149,11 +149,11 @@ function printQuote() {
   htmlString = `<p class="quote"> ${randomQuoteObject.quote}</p>
 <p class="source"> ${randomQuoteObject.source} Rose`;
   if (randomQuoteObject.season && randomQuoteObject.citation) {
-    htmlString += `, <span>Season ${randomQuoteObject.season}: "${randomQuoteObject.citation}"</span>`;
+    htmlString += `<span class= "citation">Season ${randomQuoteObject.season}: "${randomQuoteObject.citation}"</span>`;
   } else if (randomQuoteObject.season && !randomQuoteObject.citation) {
-    htmlString += `, <span>Season ${randomQuoteObject.season}</span>`;
+    htmlString += `<span class= "citation">Season ${randomQuoteObject.season}</span>`;
   } else if (!randomQuoteObject.season && randomQuoteObject.citation) {
-    htmlString = `, <span>"${randomQuoteObject.citation}"</span>`;
+    htmlString += `<span class= "citation">"${randomQuoteObject.citation}"</span>`;
   }
 
   //confirms that year exists in the quote property
